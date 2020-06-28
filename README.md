@@ -11,8 +11,7 @@
 =
 * Android Studio
 * Apache
-测试
-app图示
+app展示
 =
 * 首页
 ![](https://github.com/redkiki/Listen/blob/master/README_rsc/1.png) 
