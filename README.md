@@ -1,4 +1,4 @@
-项目与功能说明
+项目说明
 =
 ![](https://img.shields.io/badge/Api-baidutranslate-green) ![](https://img.shields.io/badge/Download-3.25M-blue) ![](https://img.shields.io/badge/License-Apache-orange) ![](https://img.shields.io/badge/version-v1.0-yellowgreen)
 
@@ -11,7 +11,7 @@
 =
 * Android Studio
 * Apache
-
+测试
 app图示
 =
 * 首页
