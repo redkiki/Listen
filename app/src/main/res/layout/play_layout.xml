@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="倾耳倾听"
+            android:textSize="18sp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/yuanwen"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/translate_textview"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/play_zuhe"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_play">
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="play_button"
+            android:background="@drawable/play2"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/nowtime_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/jiange"
+            android:layout_gravity="center_vertical"
+            android:text="/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/overtime_text"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+<SeekBar
+    android:progressDrawable="@drawable/seek_bar"
+    android:id="@+id/positionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    android:maxHeight="7.2dp"
+    android:minHeight="7.2dp"
+    android:max="100"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/caozuo_zuhe"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/last"
+            android:layout_width="0dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="last_button"
+            android:text="上句"
+           />
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="下句"
+            android:onClick="next_button"
+
+            />
+        <Button
+            android:id="@+id/repeat"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="重播此句"
+            android:onClick="repeat_button"
+
+            />
+        <Button
+            android:id="@+id/zimu"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="字幕开关"
+            android:onClick="zimu_button"
+
+            />
+        <Button
+            android:id="@+id/fanyi"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="翻译开关"
+            android:onClick="fanyi_button"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/cant"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="@drawable/round_btn"
+            android:layout_height="wrap_content"
+            android:onClick="cant_button"
+            android:text="添加听不懂"
+            />
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/delete"
+            android:textColor="#ffffff"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_btn"
+            android:layout_height="wrap_content"
+            android:onClick="delete"
+            android:text="删除所有听不懂"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>
