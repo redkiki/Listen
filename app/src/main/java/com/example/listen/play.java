@@ -294,12 +294,22 @@ public class play extends AppCompatActivity
             //防止为空
             if (mtimeList!=null&&mtimeList.size()>0)
             {
-                middleTime = timeHandler(mtimeList.get(middle));}
-            if(true) {
-                if (time < middleTime) {
+                middleTime = timeHandler(mtimeList.get(middle));
+            }
+             if(true)
+            {
+                if (time < middleTime)
+                {
                     right = middle - 1;
-                } else {
-                    if (middle + 1 >= mtimeList.size() || time < timeHandler(mtimeList.get(middle + 1))) {
+                }
+                if(time==middleTime)
+                {
+                    return middle;
+                }
+                if(time>middleTime)
+                {
+                    if (middle + 1 == mtimeList.size() || (time < timeHandler(mtimeList.get(middle + 1)))&&(middle+1)!= mtimeList.size())
+                    {
                         return middle;
                     }
                     left = middle + 1;
